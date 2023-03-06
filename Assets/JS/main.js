@@ -3,11 +3,11 @@ let resultBtn = document.getElementById("resultBtn");
 let resultField = document.getElementById("resultField");
 let resultContainer = document.getElementById("resultContainer");
 
+let results = [];
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
-
-let results = [];
 
 resultBtn.addEventListener("click", () => {
   event.preventDefault();
@@ -20,7 +20,6 @@ resultBtn.addEventListener("click", () => {
       let result = { id: i, score1: getRandomInt(4), score2: getRandomInt(4) };
       results.push(result);
       resultContainer.className = "resultContainerOn";
-      console.log(results);
     }
     results.forEach((result) => {
       let listItem = document.createElement("li");
@@ -31,4 +30,3 @@ resultBtn.addEventListener("click", () => {
   }
   nrGuesses.value = "";
 });
-
