@@ -12,12 +12,16 @@ let results = [];
 resultBtn.addEventListener("click", () => {
   event.preventDefault();
   results = [];
-  for (let i = 0; i < nrGuesses.value; i++) {
-    let result = `<li>Result nr. ${i + 1} : ${getRandomInt(5)} x ${getRandomInt(5)}</li><br>`;
-    results.push(result);
-    resultContainer.className = "resultContainerOn";
+  if (nrGuesses.value > 20) {
+    alert("Too many guesses requested, please choose less than 20.");
+  } else {
+    for (let i = 0; i < nrGuesses.value; i++) {
+      let result = `<li>Result nr. ${i + 1} : ${getRandomInt(5)} x ${getRandomInt(5)}</li><br>`;
+      results.push(result);
+      resultContainer.className = "resultContainerOn";
+    }
+    results.forEach((result) => {
+      resultField.innerHTML += result;
+    });
   }
-  results.forEach((result) => {
-    resultField.innerHTML += result;
-  });
 });
