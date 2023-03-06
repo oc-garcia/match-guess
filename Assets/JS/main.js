@@ -12,6 +12,7 @@ let results = [];
 resultBtn.addEventListener("click", () => {
   event.preventDefault();
   results = [];
+  resultField.innerHTML = "";
   if (nrGuesses.value > 20) {
     alert("Too many guesses requested, please choose less than 20.");
   } else {
