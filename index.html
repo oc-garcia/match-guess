@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Assets/Styles/reset.css" />
+    <link rel="stylesheet" href="./Assets/Styles/style.css" />
+    <title>Match Guesser</title>
+  </head>
+  <body>
+    <main>
+      <section class="formContainer">
+        <h1>Match Guesser</h1>
+        <p>
+          The web app generates random football match predictions for those who want to participate in match prediction
+          activities but are too lazy to generate the results themselves.
+        </p>
+        <form>
+          <label for="nrGuesses">How many guesses do you need?</label>
+          <input type="number" min="1" max="10" id="nrGuesses" placeholder="Numbers only" />
+          <button id="resultBtn">Give me results!</button>
+        </form>
+      </section>
+      <section id="resultContainer" class="resultContainerOff">
+        <h2>Results</h2>
+        <ul id="resultField"></ul>
+      </section>
+    </main>
+    <script src="./Assets/JS/main.js"></script>
+  </body>
+</html>
