@@ -25,4 +25,5 @@ resultBtn.addEventListener("click", () => {
       resultField.innerHTML += result;
     });
   }
+  nrGuesses.value = "";
 });
