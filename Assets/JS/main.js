@@ -15,7 +15,6 @@ resultBtn.addEventListener("click", () => {
   for (let i = 0; i < nrGuesses.value; i++) {
     let result = `<li>Result nr. ${i + 1} : ${getRandomInt(5)} x ${getRandomInt(5)}</li><br>`;
     results.push(result);
-    console.log(results);
     resultContainer.className = "resultContainerOn";
   }
   results.forEach((result) => {
