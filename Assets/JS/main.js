@@ -17,7 +17,7 @@ resultBtn.addEventListener("click", () => {
     alert("Too many guesses requested, please choose less than 20.");
   } else {
     for (let i = 0; i < nrGuesses.value; i++) {
-      let result = `<li>Result nr. ${i + 1} : ${getRandomInt(3)} x ${getRandomInt(3)}</li><br>`;
+      let result = `<li>Result nr. ${i + 1} : ${getRandomInt(4)} x ${getRandomInt(4)}</li><br>`;
       results.push(result);
       resultContainer.className = "resultContainerOn";
     }
