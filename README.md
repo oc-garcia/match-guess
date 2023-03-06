@@ -11,7 +11,7 @@ When the app is launched, users can input how many scores he needs, and the app 
 
 
 ## Project Image
-![](./Assets/Images/Screenshot%20from%202023-03-06%2016-18-51.png#vitrinedev)
+![](./Assets/Images//Screenshot%20from%202023-03-06%2016-30-42.png#vitrinedev)
 
 
 ## Deploy Link
