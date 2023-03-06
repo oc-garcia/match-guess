@@ -17,13 +17,18 @@ resultBtn.addEventListener("click", () => {
     alert("Too many guesses requested, please choose less than 20.");
   } else {
     for (let i = 0; i < nrGuesses.value; i++) {
-      let result = `<li>Result nr. ${i + 1} : ${getRandomInt(4)} x ${getRandomInt(4)}</li><br>`;
+      let result = { id: i, score1: getRandomInt(4), score2: getRandomInt(4) };
       results.push(result);
       resultContainer.className = "resultContainerOn";
+      console.log(results);
     }
     results.forEach((result) => {
-      resultField.innerHTML += result;
+      let listItem = document.createElement("li");
+      listItem.classList.add("resultItem");
+      resultField.appendChild(listItem);
+      listItem.textContent = `Result Nr ${result.id + 1} : ${result.score1} x ${result.score2}`;
     });
   }
   nrGuesses.value = "";
 });
+
